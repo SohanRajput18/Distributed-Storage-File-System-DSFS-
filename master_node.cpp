@@ -10,7 +10,7 @@ using namespace std;
 using namespace httplib;
 
 // Metadata structure to store file-chunk information
-unordered_map<string, vector<pair<string, vector<string>>>> metadata; // file -> {chunk_id, [nodes]}
+unordered_map<string, vector<pair<string, vector<string>>>> metadata; 
 
 // List of available storage nodes
 vector<string> storage_nodes = {"http://localhost:8081", "http://localhost:8082", "http://localhost:8083", "http://localhost:8084"};
@@ -102,6 +102,4 @@ int main() {
 }
 
 
-/*    g++ -std=c++17 -o master_node master_node.cpp -lws2_32
-.\master_node       */ 
 
