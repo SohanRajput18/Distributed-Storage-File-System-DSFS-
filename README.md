@@ -69,7 +69,7 @@ Architecture Diagram:
 ---
 
 ## System Design & Implementation  
-###🔹 Master Node  
+### 🔹 Master Node  
 - Accepts **file uploads** and splits them into **fixed-size chunks**.  
 - Assigns chunks to multiple **Storage Nodes** based on a **replication factor**.  
 - Maintains **metadata** about chunk locations.  
@@ -103,7 +103,7 @@ server.Post("/upload", [](const Request &req, Response &res) {
 
 ---
 
-###🔹 Storage Nodes  
+### 🔹 Storage Nodes  
 - Receive **chunk storage requests** from the Master Node.  
 - Store file chunks locally and return them upon request.  
 
@@ -182,7 +182,5 @@ The **Distributed Storage File System (DSFS)** enables **scalable, fault-toleran
 
 ---
 
-### Reports and Downloads
-🔗 *(Add link to a project report or additional documentation if available.)*  
 
-Would you like a **sample project report PDF** or any modifications to this README? 🚀🔥
+
