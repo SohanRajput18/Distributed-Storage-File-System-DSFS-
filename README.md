@@ -4,7 +4,7 @@ Here's a **GitHub README.md** template for your **Distributed Storage File Syste
 ---
 
 ## Distributed Storage File System (DSFS)  
-![[Project Image](https://www.researchgate.net/publication/355175965/figure/fig1/AS:1078308498354177@1634100188750/Fig-Distributed-File-System-general-architecture-8.ppm)](#)  
+![image](https://github.com/user-attachments/assets/af6cf0b7-9022-4729-b0c7-66ae0a7643ec)
 
 ## Overview  
 The **Distributed Storage File System (DSFS)** is a **C++-based distributed file storage system** that efficiently stores, retrieves, and manages files across multiple nodes using an **HTTP-based communication model**. The system splits files into **smaller chunks**, distributes them across multiple storage nodes, and retrieves them seamlessly when needed.  
