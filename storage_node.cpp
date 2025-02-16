@@ -46,16 +46,3 @@ int main(int argc, char* argv[]) {
     cout << "Storage Node is running on port " << port << endl;
     server.listen("localhost", port);
 }
-
-
-
-/*     g++ -std=c++17 -o storage_node storage_node.cpp -lws2_32
-.\storage_node
-
-
-.\storage_node 8081  // run in different terminals
-.\storage_node 8082
-.\storage_node 8083
-.\storage_node 8084
-
-*/
