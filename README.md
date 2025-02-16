@@ -3,7 +3,7 @@ Here's a **GitHub README.md** template for your **Distributed Storage File Syste
 
 ---
 
-## **📌 Distributed Storage File System (DSFS)**  
+## ** Distributed Storage File System (DSFS)**  
 ![Project Image](#) *(Add an image of your system architecture or terminal output here)*  
 
 ## **Overview**  
@@ -18,7 +18,7 @@ The **Distributed Storage File System (DSFS)** is a **C++-based distributed file
 
 ---
 
-## **📌 Table of Contents**  
+## ** Table of Contents**  
 - [Introduction](#introduction)  
 - [System Architecture](#system-architecture)  
 - [Functional Requirements](#functional-requirements)  
@@ -38,12 +38,12 @@ The **Distributed Storage File System (DSFS)** is a **C++-based distributed file
 
 ---
 
-## **📌 Introduction**  
+## ** Introduction**  
 Traditional **centralized file storage systems** suffer from **single points of failure, slow access times, and limited scalability**. This **Distributed Storage File System (DSFS)** overcomes these limitations by **splitting files into chunks, distributing them across multiple nodes, and ensuring redundancy** for fault tolerance.  
 
 ---
 
-## **📌 System Architecture**  
+## ** System Architecture**  
 The **DSFS system** consists of:  
 1️⃣ **Master Node** – Manages metadata, file chunking, and chunk distribution.  
 2️⃣ **Storage Nodes** – Store file chunks and respond to retrieval requests.  
@@ -54,27 +54,27 @@ The **DSFS system** consists of:
 
 ---
 
-## **📌 Functional Requirements**  
+## ** Functional Requirements**  
 ✅ **User Interface** – Allows users to upload and retrieve files.  
 ✅ **File Chunking** – Splits files into smaller chunks before distribution.  
 ✅ **Metadata Management** – Tracks chunk locations for file retrieval.  
 ✅ **Replication** – Ensures redundancy by storing each chunk on multiple nodes.  
 ✅ **File Retrieval** – Supports seamless reconstruction of files from chunks.  
 
-## **📌 Non-Functional Requirements**  
+## ** Non-Functional Requirements**  
 ✅ **Performance** – Upload and retrieval should be fast.  
 ✅ **Fault Tolerance** – System should work even if some nodes fail.  
 ✅ **Scalability** – More storage nodes can be added as needed.  
 
 ---
 
-## **📌 System Design & Implementation**  
+## ** System Design & Implementation**  
 ### **🔹 Master Node**  
 - Accepts **file uploads** and splits them into **fixed-size chunks**.  
 - Assigns chunks to multiple **Storage Nodes** based on a **replication factor**.  
 - Maintains **metadata** about chunk locations.  
 
-**📌 Master Node API (`master_node.cpp`)**  
+** Master Node API (`master_node.cpp`)**  
 ```cpp
 server.Post("/upload", [](const Request &req, Response &res) {
     auto file_data = req.get_file_value("file");
@@ -107,7 +107,7 @@ server.Post("/upload", [](const Request &req, Response &res) {
 - Receive **chunk storage requests** from the Master Node.  
 - Store file chunks locally and return them upon request.  
 
-**📌 Storage Node API (`storage_node.cpp`)**  
+** Storage Node API (`storage_node.cpp`)**  
 ```cpp
 server.Post("/store_chunk", [](const Request &req, Response &res) {
     string chunk_id = req.get_param_value("chunk_id");
@@ -129,7 +129,7 @@ server.Get("/retrieve_chunk", [](const Request &req, Response &res) {
 
 ---
 
-## **📌 Technologies Used**
+## ** Technologies Used**
 ✅ **Programming:** C++  
 ✅ **Networking:** HTTP (`httplib.h`)  
 ✅ **Storage:** File-based chunk storage  
@@ -138,7 +138,7 @@ server.Get("/retrieve_chunk", [](const Request &req, Response &res) {
 
 ---
 
-## **📌 How It Works**
+## ** How It Works**
 ### **1️⃣ Uploading a File**
 ```
 curl.exe -X POST -F "file=@sample.txt" http://localhost:8080/upload
@@ -159,7 +159,7 @@ curl.exe http://localhost:8080/metadata
 
 ---
 
-## **📌 API Endpoints**
+## ** API Endpoints**
 | **Endpoint** | **Method** | **Description** |
 |-------------|-----------|----------------|
 | `/upload` | `POST` | Upload a file to the Master Node. |
@@ -169,15 +169,15 @@ curl.exe http://localhost:8080/metadata
 
 ---
 
-## **📌 Future Enhancements**
-🚀 **Full File Retrieval API** – Automate chunk retrieval and reconstruction.  
-🚀 **Dynamic Replication** – Adjust replication factor based on available nodes.  
-🚀 **Web Interface** – Add a frontend for uploading/downloading files.  
-🚀 **Security Enhancements** – Implement encryption and authentication.  
+## ** Future Enhancements**
+ **Full File Retrieval API** – Automate chunk retrieval and reconstruction.  
+ **Dynamic Replication** – Adjust replication factor based on available nodes.  
+ **Web Interface** – Add a frontend for uploading/downloading files.  
+ **Security Enhancements** – Implement encryption and authentication.  
 
 ---
 
-## **📌 Conclusion**
+## ** Conclusion**
 The **Distributed Storage File System (DSFS)** enables **scalable, fault-tolerant file storage** using a **decentralized approach**. By implementing **chunking, replication, and HTTP-based communication**, it provides a **robust alternative to centralized storage systems**.
 
 ---
